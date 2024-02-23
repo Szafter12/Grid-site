@@ -9,17 +9,16 @@
 }
 
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.6rem;
-    color: $white;
-    background-color: $dark;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.6rem;
+	color: $white;
+	background-color: $dark;
 }
-
 
 @import './small';
 @import './medium';
