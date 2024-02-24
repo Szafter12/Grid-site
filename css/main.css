@@ -16,4 +16,82 @@ body {
   font-size: 1.6rem;
   color: #fff;
   background-color: #232323;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 2em;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100vh;
+  overflow: hidden;
+}
+.header__text {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  padding: 2em;
+}
+.header__text p {
+  font-weight: 200;
+}
+.header__img {
+  grid-row: 1/2;
+  grid-column: 1/-1;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/header-small.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: sepia();
+}
+.header__shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.header__arrow {
+  display: none;
+}
+.header__bg-icon {
+  position: absolute;
+  opacity: 0.05;
+  z-index: -5;
+}
+.header__bg-icon--one {
+  bottom: 2em;
+  right: -3em;
+  width: 50%;
+  animation: rotate-right 55s infinite linear;
+}
+.header__bg-icon--two {
+  display: none;
+}
+.header .hamburger {
+  position: absolute;
+  top: 3em;
+  left: 1em;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+.header .hamburger-inner, .header .hamburger-inner::before, .header .hamburger-inner::after {
+  background-color: #fff;
+  z-index: 100;
+}
+
+.company-name {
+  margin-bottom: 0.5em;
+  font-size: clamp(3rem, 5vh, 6rem);
+  font-family: "Cinzel", serif;
+  color: #d6c78e;
 }/*# sourceMappingURL=main.css.map */
