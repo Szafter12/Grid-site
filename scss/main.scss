@@ -43,17 +43,18 @@ body {
 		align-content: center;
 		grid-row: 2 / 3;
 		grid-column: 1 / -1;
-		padding: 2em;
+		padding: 1.5em;
 
 		.company-name {
 			margin-bottom: 0.5em;
-			font-size: clamp(3rem, 5vh, 6rem);
+			font-size: clamp(3rem, 5vw, 6rem);
 			font-family: 'Cinzel', serif;
 			color: $gold;
 		}
 
 		p {
 			font-weight: 200;
+			font-size: clamp(1.6rem, 3vw, 2.2rem);
 		}
 	}
 
@@ -95,9 +96,12 @@ body {
 			display: none;
 		}
 	}
+}
+
+.nav {
 
 	.hamburger {
-		position: absolute;
+		position: fixed;
 		top: 3em;
 		left: 1em;
 		transform: translateY(-50%);
@@ -111,9 +115,12 @@ body {
 		}
 	}
 
-	.nav {
+	.nav-bg {
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+
 		&__mobile {
-			position: absolute;
+			position: fixed;
 			top: 0;
 			left: 0;
 			right: 0;
@@ -131,7 +138,8 @@ body {
 				transform: translateX(0);
 			}
 
-			.nav__item:hover {
+			.nav__item:hover,
+			.nav__item:focus {
 				border: 2px solid $gold;
 			}
 		}
@@ -152,26 +160,8 @@ body {
 			border: 2px solid transparent;
 			border-radius: 8px;
 			transition: border 0.3s;
-
-			&::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				border: 2px solid $gold;
-				opacity: 0;
-
-				&:hover::before {
-					animation: pulse 1s;
-				}
-			}
 		}
 	}
-}
-
-
 
 @import './small';
 @import './medium';
