@@ -163,6 +163,20 @@ body {
 		}
 	}
 
+	// cards
+
+	.cards {
+		background-color: $darker;
+		overflow: hidden;
+
+		&__box {
+			display: grid;
+			grid-template-columns: repeat(9,1fr);
+			gap: 2em;
+			padding: 6em 2em;
+		}
+	}
+
 @import './small';
 @import './medium';
 @import './large';
