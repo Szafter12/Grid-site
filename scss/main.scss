@@ -45,6 +45,13 @@ body {
 		grid-column: 1 / -1;
 		padding: 2em;
 
+		.company-name {
+			margin-bottom: 0.5em;
+			font-size: clamp(3rem, 5vh, 6rem);
+			font-family: 'Cinzel', serif;
+			color: $gold;
+		}
+
 		p {
 			font-weight: 200;
 		}
@@ -96,19 +103,75 @@ body {
 		transform: translateY(-50%);
 		z-index: 100;
 
-		&-inner, &-inner::before, &-inner::after {
+		&-inner,
+		&-inner::before,
+		&-inner::after {
 			background-color: $white;
 			z-index: 100;
 		}
 	}
+
+	.nav {
+		&__mobile {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: $white;
+			transform: translateX(-102%);
+			transition: transform 0.3s;
+			z-index: 10;
+
+			&--active {
+				transform: translateX(0);
+			}
+
+			.nav__item:hover {
+				border: 2px solid $gold;
+			}
+		}
+
+		&__desktop {
+			display: none;
+		}
+
+		&__item {
+			position: relative;
+			display: inline-block;
+			margin: 0.5em;
+			padding: 0.5em;
+			font-size: 2.6rem;
+			color: $darker;
+			text-transform: uppercase;
+			text-decoration: none;
+			border: 2px solid transparent;
+			border-radius: 8px;
+			transition: border 0.3s;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: 2px solid $gold;
+				opacity: 0;
+
+				&:hover::before {
+					animation: pulse 1s;
+				}
+			}
+		}
+	}
 }
 
-.company-name {
-	margin-bottom: 0.5em;
-	font-size: clamp(3rem, 5vh, 6rem);
-	font-family: 'Cinzel', serif;
-	color: $gold;
-}
+
 
 @import './small';
 @import './medium';
