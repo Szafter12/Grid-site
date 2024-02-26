@@ -10,7 +10,7 @@
 		&__img {
 			grid-row: 1 / -1;
 			grid-column: 2 / 3;
-            background-image: url('../img/header-big.jpg');
+			background-image: url('../img/header-big.jpg');
 		}
 
 		&__arrow {
@@ -54,49 +54,54 @@
 			animation: rotate-left 55s infinite linear;
 		}
 
-        .nav {
-            grid-column: 1 / 2;
-            grid-row: 2 / 3;
-            // padding: 1em;
-    
-            .hamburger {
-                display: none;
-            }
+		.nav {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+			// padding: 1em;
 
-            .burger-menu {
-                display: none;
-            }
-    
-            &__desktop {
-                display: block;
-                border-bottom: 1px solid rgba(255,255,255, 0.2);
-            }
+			.hamburger {
+				display: none;
+			}
 
-            &__item {
-                color: $white;
-                transition: color 0.3s;
+			.burger-menu {
+				display: none;
+			}
 
-                &:hover {
-                    color: $gold;
-                }
+			&__desktop {
+				display: block;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+			}
 
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    border: 1px solid $gold;
-                    opacity: 0;
-                    
-                }
-    
-                &:hover::before {
-                    animation: pulse-nav 1s;
-                }
-            }
-        }
+			&__item {
+				color: $white;
+				transition: color 0.3s;
+
+				&:hover {
+					color: $gold;
+				}
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					border: 1px solid $gold;
+					opacity: 0;
+				}
+
+				&:hover::before {
+					animation: pulse-nav 1s;
+				}
+			}
+		}
 	}
+}
 
+@media (min-width: 1200px) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+	}
 }
