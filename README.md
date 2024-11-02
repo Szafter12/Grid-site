@@ -1,11 +1,6 @@
  <div align="center">
-<h1 align="center">Page for investment</h1>
+<h1 align="center">Demo investment site</h1>
 
-  <p align="center">
-  The site on which you will invest your money  
-</div>
-
-<br><br>
 
 ## How to start  
 To view the demo you need to go to the link provided below:
